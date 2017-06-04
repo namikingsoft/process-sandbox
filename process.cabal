@@ -1,0 +1,52 @@
+name:                process
+version:             0.1.0.0
+synopsis:            Initial project template from stack
+description:         Please see README.md
+homepage:            https://github.com/githubuser/process-sandbox#readme
+license:             BSD3
+license-file:        LICENSE
+author:              Author name here
+maintainer:          example@example.com
+copyright:           2017 Author name here
+category:            Web
+build-type:          Simple
+-- extra-source-files:
+cabal-version:       >=1.10
+
+library
+  hs-source-dirs:      src
+  exposed-modules:     Index
+                     , Process.Arithmetic
+                     , Process.Abstract
+                     , Utility.Base
+  build-depends:       base >= 4.7 && < 5
+                     , parsec ==3.1.11
+  default-language:    Haskell2010
+
+executable process-exe
+  hs-source-dirs:      app
+  main-is:             Main.hs
+  ghc-options:         -threaded -rtsopts -with-rtsopts=-N
+  build-depends:       base
+                     , process
+  default-language:    Haskell2010
+
+test-suite process-test
+  type:                exitcode-stdio-1.0
+  main-is:             HSpec.hs
+  hs-source-dirs:      test
+  ghc-options:         -Wall
+  other-modules:       IndexSpec
+                     , SandboxSpec
+                     , Process.ArithmeticSpec
+                     , Process.AbstractSpec
+                     , Utility.BaseSpec
+  build-depends:       base
+                     , process
+                     , hspec ==2.4.3
+  ghc-options:         -threaded -rtsopts -with-rtsopts=-N
+  default-language:    Haskell2010
+
+source-repository head
+  type:     git
+  location: https://github.com/namikingsoft/process-sandbox

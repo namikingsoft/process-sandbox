@@ -1,0 +1,14 @@
+version: "3"
+services:
+  app:
+    build: .
+    env_file:
+      - .env
+    volumes:
+      - ./app:/app/app
+      - ./src:/app/src
+      - ./test:/app/test
+      - ./bin:/app/bin
+      - ./stack.yaml:/app/stack.yaml
+      - ./process.cabal:/app/process.cabal
+      - ./.env:/app/.env
