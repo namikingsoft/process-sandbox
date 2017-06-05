@@ -1,8 +1,8 @@
 {-# LANGUAGE CPP #-}
-module Process.AbstractSpec where
+module Process.Example02Spec where
 
 import Test.Hspec
-import Process.Abstract
+import Process.Example02
   ( parseFromString
   , execute
   )

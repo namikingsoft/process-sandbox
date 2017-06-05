@@ -1,5 +1,5 @@
 {-# LANGUAGE CPP #-}
-module Process.Abstract
+module Process.Example02
   ( parseFromString
   , execute
   ) where

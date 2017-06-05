@@ -1,8 +1,8 @@
 {-# LANGUAGE CPP #-}
-module Process.ArithmeticSpec where
+module Process.Example01Spec where
 
 import Test.Hspec
-import Process.Arithmetic
+import Process.Example01
   ( execute
   )
 

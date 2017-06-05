@@ -16,8 +16,9 @@ cabal-version:       >=1.10
 library
   hs-source-dirs:      src
   exposed-modules:     Index
-                     , Process.Arithmetic
-                     , Process.Abstract
+                     , Process.Example01
+                     , Process.Example02
+                     , Process.Example03
                      , Utility.Base
   build-depends:       base >= 4.7 && < 5
                      , parsec ==3.1.11
@@ -38,8 +39,9 @@ test-suite process-test
   ghc-options:         -Wall
   other-modules:       IndexSpec
                      , SandboxSpec
-                     , Process.ArithmeticSpec
-                     , Process.AbstractSpec
+                     , Process.Example01Spec
+                     , Process.Example02Spec
+                     , Process.Example03Spec
                      , Utility.BaseSpec
   build-depends:       base
                      , process

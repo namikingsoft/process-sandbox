@@ -1,5 +1,5 @@
 {-# LANGUAGE CPP #-}
-module Process.Arithmetic
+module Process.Example01
   ( execute
   ) where
 
