@@ -11,5 +11,5 @@ spec = do
 
   describe "parseFromString" $ do
     it "should return true" $ do
-      show(parseFromString "let main = 3 + 2 in let a = 3 end") `shouldBe` "Right (LetIn (Var \"main\") (Add (Int 2) (Int 3)) [Let (Var \"a\") (Int 3)])"
+      show(parseFromString "let main = x + 2 in let x = 3 end") `shouldBe` "Right (LetIn (Var \"main\") (Add (Int 2) (Var \"x\")) [Let (Var \"x\") (Int 3)])"
 

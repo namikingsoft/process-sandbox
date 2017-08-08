@@ -36,12 +36,14 @@ func = try defin <|> def
 def :: Parser Func
 def = do
     string "let"
-    spaces
+    many1 space
     x <- expr
     spaces
     char '='
     spaces
     y <- expr
+    skipMany newline
+    spaces
     return $ Let x y
 
 defin :: Parser Func
